@@ -15,8 +15,8 @@ pip install -r requirements_gpu.txt
 Download [dataset](https://drive.google.com/file/d/1gyBeIpy4WzO17_7hjZKR6flP9oPhHVfU/view) 
 and extract it to the root of the program, which contains the MNIST, FMNIST, and SVHN dataset.
 
-Download [pre-trained models](https://drive.google.com/file/d/1kYQC28-FNDhMOx8k-mLji20dkTrCLm6F/view?usp=sharing)
-and extract it to the root of the program. 
+Download [pre-trained models](https://drive.google.com/open?id=1dJSMzmsLsJBfPsvjBcsaO8tSzmwqdlQB)
+and extract it to the the directory of networks. 
 ## 3. Usage of `python attack.py`
 ```
 usage: python main.py [--dataset DATASET_NAME] [--solve ATTACK_NAME]
