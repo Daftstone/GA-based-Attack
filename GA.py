@@ -114,7 +114,7 @@ def GA(pop_size, generation, length, model, image, true_label, eps, batch_size, 
                 P_list = [0.33, 0.66, 1]
                 if (use_flag == 1):
                     if (eval_count > max_eval * 0.9 or np.min(fitness[2]) <= 0.03):
-                        P_list = [0, 0, 1]
+                        P_list = [0.25, 0.5, 1]
                     if (P < P_list[0]):
                         flag = 0
                     elif (P < P_list[1]):
