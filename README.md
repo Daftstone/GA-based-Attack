@@ -1,6 +1,6 @@
-# Hybrid of Genetic Algorithm and Fast Gradient Sign Method for Generating Adversarial Examples
+# Genetic Algorithm with Multiple Fitness Functions for Generating Adversarial Examples
 
-This project is for the paper "Hybrid of Genetic Algorithm and Fast Gradient Sign Method for Generating Adversarial Examples". Some codes are from cleverhans.
+This project is for the paper "Genetic Algorithm with Multiple Fitness Functions for Generating Adversarial Examples". Some codes are from cleverhans.
 
 The code was developed on Python 3.6
 
