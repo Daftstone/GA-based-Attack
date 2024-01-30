@@ -89,16 +89,16 @@ def attack():
     success = list()
     for i in range(len(x_test)):
         true_class = np.argmax(y_test[i])
-        if (FLAGS.solve_method == 'GA'):
+        if (FLAGS.solve == 'GA'):
             grad = None
             multi_fit = False
-        elif (FLAGS.solve_method == 'Hybrid-GA'):
+        elif (FLAGS.solve == 'Hybrid-GA'):
             grad = gradient[i]
             multi_fit = False
-        elif (FLAGS.solve_method == 'MF-GA'):
+        elif (FLAGS.solve == 'MF-GA'):
             grad = None
             multi_fit = True
-        elif (FLAGS.solve_method == 'Hybrid-MF-GA'):
+        elif (FLAGS.solve == 'Hybrid-MF-GA'):
             grad = gradient[i]
             multi_fit = True
         else:
@@ -111,7 +111,7 @@ def attack():
                                 true_class, FLAGS.eps, FLAGS.batch_size,
                                 grad, multi_fit)
 
-        x_adv = np.clip(x_test[FLAGS.image] + np.reshape(tt, x_test.shape[1:]) * FLAGS.eps, 0, 1)
+        x_adv = np.clip(x_test[i] + np.reshape(tt, x_test.shape[1:]) * FLAGS.eps, 0, 1)
         pred = model.predict(np.expand_dims(x_adv, axis=0))
         predict = np.argmax(pred, axis=-1)
         success.append(predict[0] != true_class)
