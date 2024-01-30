@@ -113,11 +113,11 @@ def attack():
             multi_fit = False
         tt, eval_num, save = GA(FLAGS.n_point, FLAGS.generation,
                                 img_rows * img_cols * nchannels, model,
-                                x_test[FLAGS.image],
+                                x_test[i],
                                 true_class, FLAGS.eps, FLAGS.batch_size,
                                 grad, multi_fit)
 
-        x_adv = np.clip(x_test[FLAGS.image] + np.reshape(tt, x_test.shape[1:]) * FLAGS.eps, 0, 1)
+        x_adv = np.clip(x_test[i] + np.reshape(tt, x_test.shape[1:]) * FLAGS.eps, 0, 1)
         pred = model.predict(np.expand_dims(x_adv, axis=0))
         predict = np.argmax(pred, axis=-1)
         success.append(predict[0] != true_class)
