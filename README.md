@@ -6,7 +6,7 @@ The code was developed on Python 3.6
 
 
 ## 1. Install dependencies.
-Our experiment runs on GPU,, install this list:
+Our experiment runs on GPU, install this list:
 ```bash
 pip install -r requirements_gpu.txt
 ```
@@ -19,7 +19,7 @@ Download [pre-trained models](https://drive.google.com/open?id=1dJSMzmsLsJBfPsvj
 and extract it to the the directory of networks. 
 ## 3. Usage of `python attack.py`
 ```
-usage: python main.py [--dataset DATASET_NAME] [--solve ATTACK_NAME]
+usage: python attack.py [--dataset DATASET_NAME] [--solve ATTACK_NAME]
                [--eps perturbation_step] [--is_train [IS_TRAIN]]
                [--nb_epochs EPOCHS_NUMBER] [--n_point POINT]
                [--generation GENERATION]
@@ -44,10 +44,10 @@ optional arguments:
 ### 4. Example.
 Use pre-trained model.
 ```bash
-python main.py --dataset mnist --solve GA --eps 0.03
+python attack.py --dataset mnist --solve GA --eps 0.03
 ```
 Train model online.
 ```bash
-python main.py --dataset mnist --solve GA --eps 0.03 --is_train --nb_epochs 100
+python attack.py --dataset mnist --solve GA --eps 0.03 --is_train --nb_epochs 100
 ```
 
